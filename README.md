@@ -17,4 +17,6 @@ Mechanical testing in shear direction do not show linear but non linear mechanic
 CompDam_DGD handles this nonlinear behavior in quasi static simulation by using the Ramberg Osgood equation. This equation uses two parameter. For further information e.g. visit [wikipedia](https://en.wikipedia.org/wiki/Ramberg%E2%80%93Osgood_relationship).
 
 In order to evaluate the Ramberg Osgood Parameters, two scripts were written in Python.
-- In ```ROfit.py``` the txt files, which represent the results of mechanical shear tests, are loaded. The scripts summarizes them according to their operating temperature, creates a mean curve and transforms it into the Ramberg Osgood equation. The CompDam Code does not use the equation as shown in Wikipedia but an adjusted one.
+- In ```ROfit.py``` the txt files, which represent the results of mechanical shear tests, are loaded. The script summarizes them according to their operating temperature, creates a mean curve and transforms it into the Ramberg Osgood equation. The CompDam Code does not use the equation as shown in Wikipedia but an adjusted one. Furthermore, diagrams are drawn, a file that includes all RO parameters according to the temperature and a logfile will be printed.
+
+
