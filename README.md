@@ -1,7 +1,7 @@
 # Parameters for CFRP Simulation
 Python scripts in order to successfully simulate progressive damage of carbon fiber reinforced polymers.
 
-In my master thesis, I simulated temperature dependent progressive damage in Abaqus 2017. The foundation was the Nasa [CompDam_DGD](https://github.com/nasa/CompDam_DGD) code and I expanded the script by adding a module that recalculated mechanical properties based on the operating temperature.
+In my master thesis, I simulated temperature dependent progressive damage of open hole tensions (OHT) specimen in Abaqus 2017. The foundation was the Nasa [CompDam_DGD](https://github.com/nasa/CompDam_DGD) code and I expanded the script by adding a module that recalculated mechanical properties based on the operating temperature.
 
 For a successful simulation, two processes had to be accomplished.
 
@@ -20,3 +20,5 @@ In order to evaluate the Ramberg Osgood Parameters, two scripts were written in 
 - In ```ROfit.py``` the txt files, which represent the results of mechanical shear tests, are loaded. The script summarizes them according to their operating temperature, creates a mean curve and transforms it into the Ramberg Osgood equation. The CompDam Code does not use the equation as shown in Wikipedia but an adjusted one. Furthermore, diagrams are drawn, a file that includes all RO parameters according to the temperature and a logfile will be printed.
 - In ```RO_T_Fit.py```the file ```rop.txt``` will be loaded and the columns transferred into np.arrays. By checking the datapoints and varying the shape of the y-axis, it was clear that the RO-parameter n can be predicted by using a arctan function whereas a can be predicted by using a exp(arctan) function within that temperature range. These function were essentially implemented into CompDam.
 
+## Creating the OHT-Model
+In the description of the CompDam Manual, it is recommended to use ```C3D8R``` solid elements. The python script ```Build_OHT_Model.py``` creates a symmetric OHT-specimen by using partition lines to account for the orientation of the fibers. Cohesive contacts are used instead of cohesive elements. In order to avoid heavy distortions at the edges of the specimen, ```C3D6R``` solid elements are placed at these locations and the regions set to be elascit only.
