@@ -15,3 +15,6 @@ While mechanical properties in longitudinal direction are assumed to be temperat
 
 Mechanical testing in shear direction do not show linear but non linear mechanical behavior, i.e. it is not only necessary to find a mathematical equation for temperaturedependent shear strength and shear modulus but obtain non linear behavior during simulation.
 CompDam_DGD handles this nonlinear behavior in quasi static simulation by using the Ramberg Osgood equation. This equation uses two parameter. For further information e.g. visit [wikipedia](https://en.wikipedia.org/wiki/Ramberg%E2%80%93Osgood_relationship).
+
+In order to evaluate the Ramberg Osgood Parameters, two scripts were written in Python.
+- In ´´´code-test´´´
