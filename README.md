@@ -17,4 +17,4 @@ Mechanical testing in shear direction do not show linear but non linear mechanic
 CompDam_DGD handles this nonlinear behavior in quasi static simulation by using the Ramberg Osgood equation. This equation uses two parameter. For further information e.g. visit [wikipedia](https://en.wikipedia.org/wiki/Ramberg%E2%80%93Osgood_relationship).
 
 In order to evaluate the Ramberg Osgood Parameters, two scripts were written in Python.
-- In ´´´code-test´´´
+- In ```code-test``` you can hopefully see code writing.
