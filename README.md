@@ -22,3 +22,4 @@ In order to evaluate the Ramberg Osgood Parameters, two scripts were written in 
 
 ## Creating the OHT-Model
 In the description of the CompDam Manual, it is recommended to use ```C3D8R``` solid elements. The python script ```Build_OHT_Model.py``` creates a symmetric OHT-specimen by using partition lines to account for the orientation of the fibers. Cohesive contacts are used instead of cohesive elements. In order to avoid heavy distortions at the edges of the specimen, ```C3D6R``` solid elements are placed at these locations and the regions set to be elascit only.
+This file has to be started with Abaqus user interface or Abaqus Command line.
