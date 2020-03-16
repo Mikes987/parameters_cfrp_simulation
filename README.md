@@ -18,5 +18,5 @@ CompDam_DGD handles this nonlinear behavior in quasi static simulation by using 
 
 In order to evaluate the Ramberg Osgood Parameters, two scripts were written in Python.
 - In ```ROfit.py``` the txt files, which represent the results of mechanical shear tests, are loaded. The script summarizes them according to their operating temperature, creates a mean curve and transforms it into the Ramberg Osgood equation. The CompDam Code does not use the equation as shown in Wikipedia but an adjusted one. Furthermore, diagrams are drawn, a file that includes all RO parameters according to the temperature and a logfile will be printed.
-
+- In ```RO_T_Fit.py```the file ```rop.txt``` will be loaded and the columns transferred into np.arrays. By checking the datapoints and varying the shape of the y-axis, it was clear that the RO-parameter n can be predicted by using a arctan function whereas a can be predicted by using a exp(arctan) function within that temperature range. These function were essentially implemented into CompDam.
 
