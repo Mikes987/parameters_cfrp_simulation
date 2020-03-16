@@ -9,3 +9,9 @@ For a successful simulation, two processes had to be accomplished.
 
 2. Create a CFRP-model in Abaqus that fulfills the requirements of the CompDAm Code.
 
+
+## Temperature dependent mechanical Properties
+While mechanical properties in longitudinal direction are assumed to be temperature independent within a certain temperature range under tensile load and results of mechanical testing have led to the assumption of nearly linear correlations between temperature and mechanical properties in longidutinal direction under compressive load as well transverse direction, correlations under 12-shear load were not that obvious.
+
+Mechanical testing in shear direction do not show linear but non linear mechanical behavior, i.e. it is not only necessary to find a mathematical equation for temperaturedependent shear strength and shear modulus but obtain non linear behavior during simulation.
+CompDam_DGD handles this nonlinear behavior in quasi static simulation by using the Ramberg Osgood equation. This equation uses two parameters \alpha and n.
